@@ -19,7 +19,7 @@ var openFB = (function () {
 
         context = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)),
 
-        baseURL = 'http://www.smilesavers.net.au',
+        baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context,
 
         oauthRedirectURL = baseURL + '/oauthcallback.html',
 
